@@ -1,20 +1,21 @@
-# Smart Contract with Require, Assert, and Revert Statements
-This project demonstrates the use of require(), assert(), and revert() statements in Solidity by implementing a smart contract called SmartContractWithChecks. The contract allows Ether deposits, withdrawals, and a conditional reset feature, showcasing error handling and validation mechanisms.
+README.md
+# SmartContractWithChecks
+This Solidity smart contract demonstrates key features of Ethereum smart contracts, including ownership control, fund management, contract lifecycle management, and robust error handling using require(), assert(), and revert().
 
 # Features
+** Fund Management
 
-## Ether Deposit:
+Deposit and withdraw Ether securely.
+Tracks the contract balance.
+** Ownership Control
 
-Allows users to deposit Ether into the contract.
-Uses require() to ensure the deposit amount is greater than zero.
+Only the owner of the contract (deployer) can perform critical operations like withdrawing funds, deactivating, or reactivating the contract.
+** Lifecycle Management
 
-## Withdraw Funds:
+Deactivate the contract to stop further interactions.
+Reactivate the contract to resume operations.
+** Error Handling
 
-Allows only the owner to withdraw funds.
-Ensures sufficient balance and validates the owner using require().
-Uses assert() to check successful Ether transfer.
-
-## Reset Contract:
-
-Allows the owner to reset the contract by destroying it.
-Ensures the balance is zero before proceeding using revert().
+require(): Validates inputs and state conditions.
+assert(): Ensures critical invariants.
+revert(): Explicitly halts execution when conditions are not met.
